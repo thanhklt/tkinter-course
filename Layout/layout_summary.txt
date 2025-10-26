@@ -1,0 +1,31 @@
+- Khi tạo bố cục phải dua rat nhieu vao parent va frame ( Tạo 1 bố cục cho từng frame rồi đặt frame vào)
+- Có 3 cách:
++ pack( có thể side-chỉnh hướng thêm widget vào , expand=True-cho phép widget chiếm toàn bộ không gian khả dụng nếu có nhiều hơn 2 cái expand
+thì chia đều, fill="both"- widget lấp đầy ko gian đó theo x,y)
+    + Nếu side=top/bottom: expand theo height và sẽ mở rộng full width container
+            left/right: expand theo widget và sẽ mở rộng full height container
+    + padx,pady giống margin
+    + ipadx, ipady giống padding trong html
+    + Luon luon tao 1 frame bo cuc di theo 1 huong
++ grid ( luôn responsive)
+    * Phải setup trước bằng rowconfigure, columnconfigure(index, weight), index có the tạo nhanh (0,1,2)
+    * Keyword sticky: Chỉ widget sẽ fill vào cạnh nào
+    + Keyword columnspan: span ra nhiều cột
+    + Keyword uniform: đảm bảo sự đồng nhất
+    * grid chỉ xác định kích thước widget có thể chiếm
+    * kết hợp với padx, pady sẽ tương tự span
+    * Vấn đề voi uniform:
+        + tkinter sẽ tự lấn những ô grid trống. Dẫn đến hành vi ko mong muốn -> Giải quyết thông qua uniform = 'a' cho mọi row, col
++ place
+    * Chỉ định x,y,width, height
+    * relx, rely ứng x,y nhưng từ 0->1. Tạo đc responsive
+    + relwidth, reheight ứng với tỉ lệ với parent (0->1)
+    + anchor chỉ điểm neo của widget ( điểm neo trùng với x,y)
+
+- Kết hơợp với frame
+    * Luôn đi tu 1 hướng
+    * Phải đặt frame thì widget trong nó mới xuất ra, kich thuoc cua frame = kich thuoc cua widget lon nhất
+
+
+**** CÓ 2 LOẠI KO GIAN: KO GIAN CÓ THỂ CHIẾM VÀ KHÔNG GIAN SẼ CHIẾM
+    Ko gian sẽ chiếm thường chỉ vừa đủ với text

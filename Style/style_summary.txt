@@ -1,0 +1,7 @@
+- ttkbootstrap hoàn toàn giống ttk
+
+- IMAGE
+    + Label có the xuat hinh ra dc ( phai duoi dang ImageTk) nhưng ko bao giờ dc dùng vì ko khả năng scale
+    + Để chuyển image sang ImageTk dùng ImageTk.PhotoImage()
+    + Button:
+        Keyword compound: hiện thị text bên cạnh hình ảnh
