@@ -18,9 +18,12 @@ thì chia đều, fill="both"- widget lấp đầy ko gian đó theo x,y)
         + tkinter sẽ tự lấn những ô grid trống. Dẫn đến hành vi ko mong muốn -> Giải quyết thông qua uniform = 'a' cho mọi row, col
 + place
     * Chỉ định x,y,width, height
-    * relx, rely ứng x,y nhưng từ 0->1. Tạo đc responsive
+    * Có thể dụng tọa độ chinh xac hoặc tọa độ tương đối (relwidth, relheight)
+    * relx, rely ứng x,y nhưng từ 0->1. Tạo đc responsive -> Ưu tiên dùng tọa độ tương đối
+    * Tương đối so với frame chứa nó.
     + relwidth, reheight ứng với tỉ lệ với parent (0->1)
-    + anchor chỉ điểm neo của widget ( điểm neo trùng với x,y)
+    + anchor="nswe, center" chỉ điểm neo của widget ( điểm neo trùng với x,y), neu ko khai báo mặc dịnh là top-left -> Chú ý nếu x,y=1
+    mà anchor top-left sẽ không thấy gì cả
 
 - Kết hơợp với frame
     * Luôn đi tu 1 hướng

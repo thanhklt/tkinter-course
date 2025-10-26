@@ -1,0 +1,9 @@
+- Mọi widget đều có thể chỉnh width va height
+- Chú ý khi chỉnh width và height: 50 không phải 50px mà độ dài của 50 kí tự
+- Width và height luôn bị ghi đè bởi phương thức của layout
+***** Ta luôn ưu tiên dùng pthuc của layout
+
+THỨ TỰ ĐÈ LÊN NHAU
+- Xác định bởi thứ tự tạo ra ( ko phải thứ tự đặt layout)
+C1: Dùng lift(), lower(), chú ý tkraise() = lift()
+- Keyword aboveThis để đưa lên trên 1 widget duy nhất
